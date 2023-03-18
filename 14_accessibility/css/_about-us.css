@@ -1,0 +1,125 @@
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about__title {
+  margin-bottom: 20px;
+}
+
+.about__text {
+  max-width: 1250px;
+  margin-bottom: 50px;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
+
+.about__block {
+  justify-content: space-between;
+}
+
+.about__cards {
+  width: calc(870 / 1770 * 100%)
+}
+
+.about__cards:not(:last-child),
+.about__cards:not(:first-child){
+  margin-bottom: 32px;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  min-height: 622px;
+  margin-right: 32px;
+  background-image: url("../img/about-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-detail__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-detail__text {
+  max-width: 455px;
+  margin:0 40px 0 0;
+  font-weight: var(--bold);
+  font-size: var(--defaultFontSize);
+  line-height: 32px;
+  color: var(--white);
+}
+
+.btn--border-accent {
+  display: inline-block;
+  padding: 18px 39px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  outline: 3px solid var(--btnDefault);
+  outline-offset: 0;
+  background-color: transparent;
+  transition: background-color 0.1s ease-in-out, outline 0.1s ease-in-out;
+}
+
+.btn--border-accent:hover {
+  background-color: var(--btnDefault);
+}
+
+.btn--border-accent:focus-visible {
+  background-color: var(--btnDefault);
+}
+
+.btn--border-accent:active {
+  background-color: var(--btnActive);
+  outline: 3px solid var(--btnActive);
+}
+
+.card {
+  padding: 64px 114px 65px 60px;
+  border: 1px solid #CACACA;
+  background-size: 0;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.card::before {
+  content: "";
+  width: calc(190 / (870 - 60 - 114) * 100%);
+  padding-top: calc(165 / (870 - 60 - 115) * 100%);
+  margin-right: 50px;
+  background-image: inherit;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card__descr {
+  flex-direction: column;
+  max-width: 455px;
+  width: 100%;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.card-title {
+  margin: 0;
+  margin-bottom: 8px;
+  max-width: 452px;
+  width: 100%;
+  font-weight: var(--bold);
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--textBlack);
+}
+

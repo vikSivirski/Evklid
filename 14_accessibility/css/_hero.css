@@ -1,0 +1,89 @@
+.hero {
+  padding-bottom: 50px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 80px;
+  pointer-events: auto;
+}
+
+.slider {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--grayBlue);
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 24px;
+  max-width: 837px;
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 85px;
+  color: var(--white);
+}
+
+.hero__text {
+  margin: 0;
+  margin-bottom: 90px;
+  max-width: 837px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--white);
+}
+
+.hero__btn {
+  padding: 25px 36.88px;
+  max-width: 300px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--white);
+  background-color: var(--btnDefault);
+  outline: none;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.slide {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slide-1 {
+  background-image: url("../img/hero-img1.jpg");
+}
+
+.slide-2 {
+  background-image: url("../img/hero-img2.jpg");
+}
+
+.slide-3 {
+  background-image: url("../img/hero-img3.png");
+}
+
+.hero-content__btn:hover {
+  background-color: var(--btnHoverFocus);
+}
+
+.hero-content__btn:focus-visible {
+  background-color: var(--btnHoverFocus);
+}
+
+.hero-content__btn:active {
+  background-color: var(--btnActive);
+}
+
+
+

@@ -1,0 +1,116 @@
+.faq {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.faq__title {
+  margin-bottom: 41px;
+}
+
+.acordion__item {
+  align-items: center;
+  min-height: 110px;
+  margin-top: -1px;
+  border-bottom: 1px solid var(--lightGray);
+  transition: border-color 0.2s;
+}
+
+.acordion__item:first-child {
+  border-top: 1px solid var(--lightGray);
+}
+
+.acordion__item:not(:first-child) {
+  border-top: 1px solid transparent;
+}
+
+
+.acordion__item:hover,
+.acordion__item:focus-within {
+  border-color: var(--btnDefault);
+}
+
+.acordion__title {
+  margin: 0;
+  width: 100%;
+}
+
+.slash {
+  color: var(--lightGray);
+}
+
+.acordion__btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 110px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 110px;
+  padding-right: 90px;
+  font-weight: var(--bold);
+  font-size: 24px;
+  line-height: var(--defaultLineHeght);
+  color: var(--textBlack);
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+}
+
+.acordion__btn:hover,
+.acordion__btn:focus {
+  color: var(--btnDefault);
+}
+
+.acordion__btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url(../img/acordion.svg);
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-50%) rotate(0);
+  transition-property: background-image, transform;
+  transition-duration: 0.2s;
+  transition: background-image 0.2s, transform 0.5s;
+}
+
+
+.acordion__btn:hover::after,
+.acordion__btn:focus::after {
+  background-image: url(../img/hover-acordion.svg);
+}
+
+.is-active .acordion__btn::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.acordion__item-content {
+  overflow: hidden;
+}
+
+.acordion__item-content-wrap {
+  max-width: 1003px;
+  margin-bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.is-active .acordion__item-content-wrap  {
+  opacity: 1;
+  visibility: visible;
+}
+
+.acordion__item-text:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.is-active,
+.acordion__item {
+  min-height: auto;
+}

@@ -1,0 +1,142 @@
+.stages {
+  padding-top: 19px;
+  padding-bottom: 50px;
+}
+
+.stages__title {
+  margin-bottom: 50px;
+}
+
+.tabs__list {
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 45px;
+  max-width: 1770px;
+  width: 100%;
+}
+
+.tabs__list-item {
+  font-weight: var(--regular);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.tabs__list-item:not(:last-child) {
+  margin-right: 86px;
+}
+
+.tabs__btn {
+  color: var(--textBlack);
+  outline: none;
+  cursor: pointer;
+  transition: color 0.1s ease-in-out, outline 0.1s ease-in-out;
+}
+
+.tabs__btn:hover {
+  color: var(--btnDefault);
+}
+
+.tabs__btn:focus-visible {
+  outline: 2px solid var(--btnDefault);
+  outline-offset: 5px;
+}
+
+.tabs__btn:active {
+  color: var(--btnActive);
+}
+
+.tabs__btn--active {
+  color: var(--btnActive);
+}
+
+.steps {
+  display: none;
+  justify-content: space-between;
+  opacity: 0;
+  transition: display 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.steps--active {
+  display: flex;
+  opacity: 1;
+}
+
+.steps__descr {
+  width: calc(758 / 1770 * 100%);
+}
+
+.steps::after {
+  content: "";
+  width: calc(870 / 1770 * 100%);
+  min-height: 460px;
+  margin-top: 10px;
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.step-one::after {
+  content: "";
+  background-image: url("../img/consultation.jpg");
+}
+
+.step-two::after {
+  content: "";
+  background-image: url("../img/smeta.jpg");
+}
+
+.step-three::after {
+  content: "";
+  background-image: url("../img/contractors.jpg");
+}
+
+.step-four::after {
+  content: "";
+  background-image: url("../img/inspect-all-stages.jpg");
+}
+
+.steps__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: var(--bold);
+  font-size: 24px;
+  line-height: var(--defaultLineHeght);
+}
+
+.steps__text {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.steps__btn {
+  margin-right: 30px;
+}
+
+.btn--border-gray {
+  padding: 19px 39px;
+  background-color: transparent;
+  outline: 1px solid var(--textBlack);
+  font-weight: var(--regular);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--textBlack);
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, outline 0.15s ease-in-out;
+}
+
+.btn--border-gray:hover {
+  background-color: var(--gray);
+  color: var(--white);
+  outline: none;
+}
+
+.btn--border-gray:focus-visible {
+  background-color: var(--gray);
+  color: var(--white);
+  outline: none;
+}
+
+.btn--border-gray:active {
+  background-color: var(--black);
+  color: var(--white);
+}

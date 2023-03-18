@@ -1,0 +1,119 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--btnDefault);
+}
+
+img, svg {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--defaultFontSize);
+}
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.visualy-hiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.flex {
+  display: flex
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 38px;
+  font-weight: var(--bold);
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+  border: none;
+  outline: none;
+  background-color: var(--btnDefault);
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--btnHoverFocus);
+}
+
+.btn:focus-visible {
+  background-color: var(--btnHoverFocus);
+}
+
+.btn:active {
+  background-color: var(--btnActive);
+}
+
+.container {
+  max-width: var(--containerMaxWidth);
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--containerPdd);
+  padding-right: var(--containerPdd);
+}
+
+.section-title {
+  margin: 0;
+  font-weight: var(--regular);
+  font-size: 48px;
+  line-height: 59px;
+  color: var(--textBlack);
+}
+
+.text {
+  margin: 0;
+  font-weight: var(--regular);
+  font-size: var(--defaultFontSize);
+  line-height: var(--defaultLineHeght);
+  color: var(--textBlack);
+}
+

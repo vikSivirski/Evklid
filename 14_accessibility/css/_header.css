@@ -1,0 +1,208 @@
+.header {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+}
+
+.burger {
+  display: none;
+}
+
+.heder-block {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  flex-shrink: 0;
+  margin-right: 40px;
+  width: 224px;
+  height: 72px;
+}
+
+.header__serch-btn {
+  flex-shrink: 0;
+  justify-self: flex-end;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-right: 0;
+  background-color: var(--white);
+  stroke: var(--textBlack);
+  transform: translateX(0);
+  transition: stroke 0.2s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+.header__serch-btn:hover {
+  background-color: var(--white);
+  stroke: var(--btnDefault);
+}
+
+.header__serch-btn:focus-visible {
+  background-color: var(--white);
+  outline: 2px solid var(--btnDefault);
+  outline-offset: 4px;
+}
+
+.header__serch-btn:active {
+  background-color: var(--white);
+  fill: var(--btnActive);
+  stroke: var(--btnActive);
+}
+
+/*form*/
+
+.serch-form {
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 13;
+  width: 494px;
+  padding: 16px 13px 16px 32px;
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+  visibility: hidden;
+  transform: translate( 0, -50%) scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-in-out, visibility 0.2s;
+}
+
+.serch-form--active {
+  visibility: visible;
+  transform: translate( 0, -50%) scaleX(1);
+}
+
+.serch-form__input {
+  width: calc(412 / 494 * 100%);
+  border: none;
+  border-bottom: 1px solid #DCDCDC;
+  outline: none;
+}
+
+.serch-form__input::placeholder {
+  font-weight: var(--medium);
+  font-size: 18px;
+  line-height: 22px;
+  color: #ADADAD;
+}
+
+.serch-form__btn {
+  flex-shrink: 0;
+  justify-self: flex-end;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-right: 15px;
+  background-color: var(--white);
+  stroke: var(--textBlack);
+  cursor: pointer;
+  transform: translateX(0);
+  transition: stroke 0.2s ease-in-out;
+}
+
+.serch-form__btn:hover {
+  background-color: var(--white);
+  stroke: var(--btnDefault);
+}
+
+.serch-form__btn:focus-visible {
+  background-color: var(--white);
+  outline: 2px solid var(--btnDefault);
+  outline-offset: 4px;
+}
+
+.serch-form__btn:active {
+  background-color: var(--white);
+  stroke: var(--btnActive);
+}
+
+.serch-form__closed{
+  flex-shrink: 0;
+  justify-self: flex-end;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-right: 0;
+  background-color: var(--white);
+  stroke: #999999;
+  cursor: pointer;
+  transform: translateX(0);
+  transition: stroke 0.2s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+.serch-form__closed:hover {
+  background-color: var(--white);
+  stroke: var(--btnDefault);
+}
+
+.serch-form__closed:focus-visible {
+  background-color: var(--white);
+  outline: 2px solid var(--btnDefault);
+  outline-offset: 4px;
+}
+
+.serch-form__closed:active {
+  background-color: var(--white);
+  stroke: var(--textBlack);
+}
+
+/*form*/
+
+.header__nav {
+  align-items: center;
+}
+
+.header__list {
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  margin-right: 85px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.header__list-item:not(:last-child) {
+  margin-right: 85px;
+}
+
+
+.header__list-link {
+  position: relative;
+  color: var(--textBlack);
+  transition: color 0.05s ease-in-out;
+}
+
+.header__list-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--btnDefault);
+  outline: none;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out, outline 0.2s ease-in-out, background-color 0.05s ease-in-out;
+}
+
+.header__list-link:hover::after {
+  transform: scaleX(1);
+}
+
+.header__list-link:focus-visible {
+  outline: 2px solid var(--btnDefault);
+  outline-offset: 5px;
+}
+
+.header__list-link:active {
+  color: var(--btnActive);
+}
+
+.header__list-link:active::after{
+  background-color: var(--btnActive);
+}
+
